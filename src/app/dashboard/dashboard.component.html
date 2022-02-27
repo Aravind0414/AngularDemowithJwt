@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-primary justify-content-between">
+  <a class="navbar-brand" routerLink='./'>Dashboard</a>
+  <form class="form-inline">
+    <a class="navbar-brand my-2 my-sm-0" (click)="logout()">Logout</a>
+  </form>
+</nav>
+
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink='interpolation'> Template</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink='property'> Property</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink='twoway'> TwoWay</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink='event'> Event</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink='ngtrack'> NgTrack</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

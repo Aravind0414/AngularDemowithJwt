@@ -1,0 +1,50 @@
+<p>Employee Details!</p>
+  <table class="table-bordered">
+    <thead>
+        <th> User ID </th>
+        <th> Title </th>
+        <th> First Name </th>
+        <th>  Last Name</th>
+        <th>  Index</th>
+        <th>  IsFirst</th>
+        <th>  IsLast</th>
+        <th>  IsEven</th>
+        <th>  IsLast</th>
+       
+       
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of Employees; trackBy:trackByUserId;let i=index;let isFirst=first;let isLast=last; let isEven=even;let isOdd=odd;">
+            <td>  {{employee.userId}}  </td> 
+            <td> {{employee.jobTitleName  | uppercase }} </td>  
+            <td>{{employee.firstName | lowercase}} </td>  
+            <td> {{employee.lastName}}</td>  
+            <td> {{i}}</td>  
+            <td> {{isFirst}}</td>  
+            <td> {{isLast}}</td>  
+            <td> {{isEven}}</td>  
+            <td> {{isOdd}}</td> 
+               
+        </tr>
+        <tr *ngIf="!Employees || Employees.length==0">
+                No Data
+        </tr>
+    </tbody>
+</table>
+
+<div class='row' [ngSwitch]="selectedValue">  
+    <div *ngSwitchCase="'U001'">One is Selected</div>  
+    <div *ngSwitchCase="'U002'">Two is Selected</div>  
+</div> 
+<div> 
+
+
+<button (click)="getEmployess()">
+    Refresh Employess
+</button>
+</div> 
+<b>{{6589.23 | currency:"USD"}}</b><br/> 
+<b>{{"05/22/2020" | date:'dd/MM/yy'}}</b><br/> 
+
+
+ 
